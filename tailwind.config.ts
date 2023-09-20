@@ -14,11 +14,15 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        bgPrimary: "#212428",
-        bgSecondary: "#1f2125",
+        bgPrimary: "#212529",
+        bgSecondary: "#202327",
         red: "#e62e4a",
         white: "#ffffff",
         offWhite: "#c4cfde",
+      },
+      boxShadow: {
+        combined:
+          "10px 10px 19px rgb(28 30 34), -10px -10px 19px rgb(38 42 46), inset 21px 21px 19px rgb(24 26 29), inset -21px -21px 19px rgb(32 34 37)",
       },
     },
   },
