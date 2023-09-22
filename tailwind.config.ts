@@ -17,7 +17,7 @@ const config: Config = {
         bgPrimary: "#212529",
         bgSecondary: "#202327",
         red: "#e62e4a",
-        white: "#ffffff",
+        white: "#c4cfde",
         offWhite: "#9fa0a3",
       },
       boxShadow: {
