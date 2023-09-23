@@ -9,16 +9,14 @@ import { FiLinkedin, FiTwitter, FiGithub } from "react-icons/fi";
 const MobileNavbar = (props: any) => {
   const { isVisible, setToggleVisibility } = props;
   console.log(isVisible);
-  // useEffect(() => {
-  //   console.log("from mobilnav useEffect ", isVisible); // This will reflect the correct state
-  // }, [isVisible]);
+
   return (
     <div>
       <div className="absolute top-0 w-3/5 h-screen">
         <div
           className={`sm:hidden ${
             isVisible
-              ? "transform translate-x-0 z-50"
+              ? "transform translate-x-0 z-50 "
               : "transform -translate-x-full"
           }   px-7 py-6 bg-bgSecondary transition-all duration-700 relative`}
         >
@@ -27,21 +25,19 @@ const MobileNavbar = (props: any) => {
             <div className="flex justify-between items-center">
               {/* logo image */}
               <div>
-                <Link href={"/"}>
-                  <Image
-                    src={"/profile.png"}
-                    height={50}
-                    width={50}
-                    alt="profile image"
-                    className="rounded-full"
-                  />
-                </Link>
+                <Image
+                  src={"/profile.png"}
+                  height={50}
+                  width={50}
+                  alt="profile image"
+                  className="rounded-full"
+                />
               </div>
               {/* cross icon */}
               <div>
-                <div className="h-12 w-12 rounded-full bg-[#27292a] absolute right-5"></div>
-                <span className="relative top-2" onClick={setToggleVisibility}>
-                  <RxCross1 style={{ color: "red", fontSize: "30px" }} />
+                <div className="h-12 w-12 rounded-full bg-[#27292a] absolute right-4 top-6"></div>
+                <span className="relative" onClick={setToggleVisibility}>
+                  <RxCross1 style={{ color: "red", fontSize: "25px" }} />
                 </span>
               </div>
             </div>
@@ -51,8 +47,9 @@ const MobileNavbar = (props: any) => {
           </div>
           {/*middle portion of navbar  */}
           <div className="mt-8 mb-32">
-            <div className="flex flex-col space-y-6 text-white text-sm font-semibold">
+            <div className="flex flex-col space-y-8 text-white text-sm font-semibold">
               <Link href={"/"}>HOME</Link>
+              <Link href={"/"}>FEATURES</Link>
               <Link href={"/"}>PORTFOLIO</Link>
               <Link href={"/"}>RESUME</Link>
               <Link href={"/"}>BLOG</Link>
