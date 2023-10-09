@@ -5,7 +5,7 @@ import React from "react";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import MobileNavbar from "./MobileNavbar";
-import profile from "../../public/profile.png";
+import profile from "public/profile.png";
 
 const Header = () => {
   const [navbarVisibility, setNavbarVisibility] = useState(false);

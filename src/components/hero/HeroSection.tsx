@@ -2,9 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import { FiLinkedin, FiTwitter, FiGithub } from "react-icons/fi";
-import { FaReact } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiTypescript } from "react-icons/si";
-import profile from "../../public/profile-image-withoutbg.png";
+import profile from "public/profile-image-withoutbg.png";
 import AnimatedText from "./AnimatedText";
 
 const HeroSection = () => {
@@ -75,7 +74,7 @@ const HeroSection = () => {
             {/* Container for Image */}
             <div className="flex justify-center items-center">
               {/* Profile Image */}
-              <Image src={profile} alt="profile image" layout="center" />
+              <Image src={profile} alt="profile image" />
             </div>
           </div>
         </div>
