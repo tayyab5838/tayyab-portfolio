@@ -9,17 +9,15 @@ import profile from "../../public/profile.png";
 
 const Header = () => {
   const [navbarVisibility, setNavbarVisibility] = useState(false);
-  console.log(`from header  ${navbarVisibility}`);
   const toggleVisibility = () => {
     setNavbarVisibility(!navbarVisibility);
-    console.log(navbarVisibility);
   };
   return (
     <div>
       <div
         className={`${
           navbarVisibility ? "opacity-30 -z-0" : ""
-        } flex my-5 xl:my-8 mx-5 sm:mx-9 xl:mx-12 items-center justify-between`}
+        } flex my-5 xl:my-8 px-5 sm:px-9 xl:px-12 items-center justify-between`}
       >
         {/* logo  */}
         <div className="flex shrink-0">
@@ -32,18 +30,30 @@ const Header = () => {
           </Link>
         </div>
         {/* main menu navigation */}
-        <div className="text-offWhite flex text-sm xl:text-lg items-center">
+        <div className=" flex text-sm xl:text-lg items-center">
           {/* left menu */}
-          <div className="hidden sm:flex space-x-8 xl:space-x-16 mr-5">
-            <Link href={"/"}>HOME</Link>
-            <Link href={"/"}>FEATURES</Link>
-            <Link href={"/"}>PORTFOLIO</Link>
-            <Link href={"/"}>RESUME</Link>
-            <Link href={"/"}>BLOG</Link>
+          <div className="hidden lg:flex space-x-8 xl:space-x-16 mr-5">
+            <div>
+              <Link className="text-offWhite hover:text-white" href={"/"}>
+                HOME
+              </Link>
+            </div>
+            <Link href={"/"} className="text-offWhite hover:text-white">
+              FEATURES
+            </Link>
+            <Link href={"/"} className="text-offWhite hover:text-white">
+              PORTFOLIO
+            </Link>
+            <Link href={"/"} className="text-offWhite hover:text-white">
+              RESUME
+            </Link>
+            <Link href={"/"} className="text-offWhite hover:text-white">
+              BLOG
+            </Link>
           </div>
           <div>
             {/* right side red button */}
-            <div className="hidden sm:block">
+            <div className="hidden lg:block">
               <Link href={"/"}>
                 <button className=" bg-bgPrimary hover:bg-bgSecondary py-2 xl:py-3 px-3 xl:px-4 text-red rounded-sm font-medium text-base shadow-combined transition duration-500  hover:-translate-y-1">
                   {" "}
@@ -52,7 +62,7 @@ const Header = () => {
               </Link>
             </div>
             {/* hamburger button for mobile devices */}
-            <button className="sm:hidden" onClick={toggleVisibility}>
+            <button className="lg:hidden" onClick={toggleVisibility}>
               <span>
                 <RxHamburgerMenu style={{ fontSize: "30px", color: "red" }} />
               </span>

@@ -2,23 +2,21 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
 import { RxCross1 } from "react-icons/rx";
 import { FiLinkedin, FiTwitter, FiGithub } from "react-icons/fi";
 
 const MobileNavbar = (props: any) => {
   const { isVisible, setToggleVisibility } = props;
-  console.log(isVisible);
 
   return (
     <div>
-      <div className="absolute top-0 w-3/5 h-screen">
+      <div className="absolute top-0 w-3/5 sm:w-2/5 h-full">
         <div
-          className={`sm:hidden ${
+          className={`lg:hidden  ${
             isVisible
-              ? "transform translate-x-0 z-50 "
+              ? "transform translate-x-0"
               : "transform -translate-x-full"
-          }   px-7 py-6 bg-bgSecondary transition-all duration-700 relative`}
+          }   px-7 py-6 bg-bgSecondary transition-all duration-700 relative z-10`}
         >
           {/*upper portion of navbar  */}
           <div className="border-b border-offWhite">
@@ -36,7 +34,10 @@ const MobileNavbar = (props: any) => {
               {/* cross icon */}
               <div>
                 <div className="h-12 w-12 rounded-full bg-[#27292a] absolute right-4 top-6"></div>
-                <span className="relative" onClick={setToggleVisibility}>
+                <span
+                  className="relative cursor-pointer"
+                  onClick={setToggleVisibility}
+                >
                   <RxCross1 style={{ color: "red", fontSize: "25px" }} />
                 </span>
               </div>
@@ -47,7 +48,7 @@ const MobileNavbar = (props: any) => {
           </div>
           {/*middle portion of navbar  */}
           <div className="mt-8 mb-32">
-            <div className="flex flex-col space-y-8 text-white text-sm font-semibold">
+            <div className="flex flex-col space-y-8 text-white text-sm font-semibold bg-bgSecondary">
               <Link href={"/"}>HOME</Link>
               <Link href={"/"}>FEATURES</Link>
               <Link href={"/"}>PORTFOLIO</Link>
