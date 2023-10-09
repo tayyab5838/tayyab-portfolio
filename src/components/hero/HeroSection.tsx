@@ -9,7 +9,7 @@ import AnimatedText from "./AnimatedText";
 const HeroSection = () => {
   return (
     <section>
-      <div className="relative flex flex-col-reverse lg:flex-row lg:space-x-20 px-10 sm:px-14 md:px-16 lg:px-20 mt-10 lg:mt-28 mb-10">
+      <div className="relative flex flex-col-reverse lg:flex-row lg:space-x-20 mx-10 sm:mx-14 md:mx-16 lg:mx-20 mt-10 lg:mt-28 mb-10">
         {/* left div */}
         <div className="flex flex-col justify-between lg:flex-1 lg:flex-grow-0 mt-10 space-y-8 lg:mt-0">
           <p className="text-offWhite">WELLCOME TO MY WORLD</p>
