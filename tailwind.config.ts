@@ -8,6 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      visibility: ["group-hover"],
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -15,14 +16,11 @@ const config: Config = {
       },
       colors: {
         bgPrimary: "#222529",
-        bgSecondary: "#202327",
+        bgSecondary: "#1f2226",
+        bgThird: "#191c21",
         red: "#e62e4a",
         white: "#ffffff",
         offWhite: "#9fa0a3",
-      },
-      boxShadow: {
-        combined:
-          "10px 10px 19px rgb(28 30 34), -10px -10px 19px rgb(38 42 46), inset 21px 21px 19px rgb(24 26 29), inset -21px -21px 19px rgb(32 34 37)",
       },
     },
   },
