@@ -12,8 +12,10 @@ const HeroSection = () => {
       <div className="relative flex flex-col-reverse lg:flex-row lg:space-x-20 mx-10 sm:mx-14 md:mx-16 lg:mx-20 mt-10 lg:mt-28 mb-10">
         {/* left div */}
         <div className="flex flex-col justify-between lg:flex-1 lg:flex-grow-0 mt-10 space-y-8 lg:mt-0">
-          <p className="text-offWhite">WELLCOME TO MY WORLD</p>
-          <h1 className="text-white font-extrabold text-3xl lg:text-5xl xl:text-6xl  my-3 leading-[50px] lg:leading-[70px]">
+          <p className="text-offWhite font-normal text-xs text">
+            WELLCOME TO MY WORLD
+          </p>
+          <h1 className="text-white font-extrabold text-3xl lg:text-5xl xl:text-6xl  my-2 leading-[50px] lg:leading-[70px]">
             Hi&rsquo; I&apos;m <span className="text-red">Tayyab</span>
             <br />
             <span>a </span>
