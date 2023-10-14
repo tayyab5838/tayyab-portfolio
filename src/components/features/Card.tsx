@@ -1,15 +1,18 @@
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { cardData } from "@/lib/data";
+import { cardData } from "@/lib/data/featuresData";
 import getIconComponent from "./GetIcon";
 
 const Card = () => {
   return (
     <>
       <div className="my-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-6 md:gap-x-4">
-        {cardData.map((card: any) => {
+        {cardData.map((card: any, i: number) => {
           return (
-            <div className="bg-bgSecondary hover:bg-bgThird group py-6 px-8 rounded-xl shadow-md shadow-black">
+            <div
+              key={i}
+              className="bg-bgSecondary hover:bg-bgThird group py-6 px-8 rounded-xl shadow-md shadow-black"
+            >
               <div className="hover:-translate-y-3 transition duration-500 ease-in-out flex flex-col space-y-2 ">
                 {/* getting icons dynamically from getIconComponent */}
                 <span>{getIconComponent(card.titleIcon)}</span>
